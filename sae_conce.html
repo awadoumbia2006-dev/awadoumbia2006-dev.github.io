@@ -1,0 +1,82 @@
+<section class="formation-page">
+
+  <h1>SAE – Conception et Déploiement d’une Infrastructure Wi-Fi Sécurisée</h1>
+  <p class="date">Projet académique – Réseaux & Cybersécurité</p>
+
+  <img src="sae_conce2.png" alt="Infrastructure Wi-Fi sécurisée" class="formation-img">
+    <link rel="stylesheet" href="style.css">
+  <h2>🔹 Contexte</h2>
+  <p>
+    Ce projet s’inscrit dans un contexte professionnel simulé : une chaîne de salles de sport
+    disposant de plusieurs sites géographiques souhaite <strong>homogénéiser, sécuriser et superviser</strong>
+    son infrastructure Wi-Fi. Chaque site est relié à Internet via un routeur 4G
+    <strong>TP-Link TL-MR100</strong>.
+  </p>
+
+  <h2>🔹 Objectifs du projet</h2>
+  <p>
+    L’objectif était de concevoir une <strong>architecture réseau sécurisée et reproductible</strong>,
+    permettant une authentification centralisée, un réseau invité isolé, ainsi qu’une
+    supervision complète de la sécurité via un serveur Linux unique.
+  </p>
+
+  <h2>🔹 Rôle</h2>
+  <ul>
+    <li>Analyse des besoins et contraintes multi-sites</li>
+    <li>Conception de l’architecture réseau et sécurité</li>
+    <li>Déploiement d’un Wi-Fi d’entreprise sécurisé</li>
+    <li>Mise en place d’un réseau invité isolé</li>
+    <li>Configuration de la supervision et du hardening Linux</li>
+    <li>Documentation complète et gestion du projet via GitLab</li>
+  </ul>
+
+  <h2>🔹 Travaux réalisés</h2>
+  <p>
+    Un SSID <strong>Entreprise</strong> a été déployé en <strong>WPA2-Enterprise (PEAP-MSCHAPv2)</strong>
+    avec authentification centralisée via <strong>FreeRADIUS</strong>, sans certificat client,
+    afin de faciliter le déploiement sur plusieurs sites.
+  </p>
+  <p>
+    Un SSID <strong>Invités</strong> totalement isolé du réseau interne a également été configuré.
+    Le comportement réel du routeur TL-MR100 a été analysé et documenté, avec des
+    <strong>preuves d’isolement réseau</strong> (tcpdump, ARP, tests de ports).
+  </p>
+  <p>
+    Le serveur central a été rigoureusement durci (Linux Hardening) et intégré à une
+    solution de <strong>supervision Wazuh</strong> permettant la centralisation des journaux,
+    la détection d’incidents et l’analyse de sécurité.
+  </p>
+
+  <h2>🔹 Compétences mobilisées</h2>
+  <p>
+    🔹 Architecture réseau multi-sites<br>
+    🔹 Sécurité Wi-Fi (WPA2-Enterprise, RADIUS)<br>
+    🔹 Linux Hardening<br>
+    🔹 Supervision de la sécurité (Wazuh)<br>
+    🔹 Analyse de risques (EBIOS – ANSSI)<br>
+    🔹 GitLab & travail collaboratif
+  </p>
+
+  <h2>🔹 Résultats</h2>
+  <p>
+    Ce projet m’a permis de maîtriser la <strong>conception complète d’une infrastructure
+    sécurisée</strong>, depuis l’analyse des risques jusqu’au déploiement technique,
+    la supervision et la documentation professionnelle, dans un contexte proche
+    des exigences du monde de l’entreprise.
+  </p>
+  <div class="project-links">
+  <a href="https://gitlab.sorbonne-paris-nord.fr/12513883/sae501-2026-groupeadm"
+     target="_blank"
+     class="btn-cv">
+     Voir le projet
+  </a>
+  <a href="index.html#projets" class="btn-cv">
+    ← Retour aux projets
+  </a>
+
+</div>
+  </section>
+
+
+
+

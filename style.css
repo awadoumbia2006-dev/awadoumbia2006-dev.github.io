@@ -1,0 +1,1093 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: linear-gradient(to right, #fff6e9, #ffe1b8);
+}
+
+/* ===== MENU ===== */
+header {
+    position: fixed;       /* 🔥 reste visible */
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(to right, #fff6e9, #ffe1b8);
+    z-index: 1000;
+    padding: 20px 60px;
+}
+
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+    color: #8b5a00;
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+}
+
+.btn-contact {
+    background-color: #8b5a00;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 20px;
+}
+
+/* ===== HERO ===== */
+.hero {
+    display: flex;
+    align-items: center;
+    padding: 80px 60px;
+}
+.hero,
+#formations {
+    scroll-margin-top: 120px;
+}
+
+
+.hero-left {
+    width: 45%;
+    display: flex;
+    justify-content: center;
+}
+
+.photo-container {
+    position: relative;
+    width: 300px;
+    height: 300px;
+}
+
+/* FORME ORGANIQUE DERRIÈRE (PAS UN CERCLE) */
+.photo-container::before {
+    content: "";
+    position: absolute;
+    inset: -12px;
+    background: #f3e1c3;
+    z-index: 1;
+
+    /* 👇 C’EST ICI LA DIFFÉRENCE */
+    border-radius: 45% 55% 60% 40% / 55% 45% 60% 40%;
+    transform: rotate(-6deg);
+}
+
+/* PHOTO (reste un cercle) */
+.photo-container img {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    z-index: 2;
+    border: 5px solid #8b5a00;
+}
+
+
+
+.hero-right {
+    width: 55%;
+}
+
+.hero-right h1 span {
+    color: #8b5a00;
+}
+
+.hero-right h2 {
+    margin: 15px 0;
+    color: #8b5a00;
+}
+
+.hero-right p {
+    max-width: 500px;
+    margin-bottom: 20px;
+}
+
+/* ===== BOUTON CV AMELIORE ===== */
+.btn-cv {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 32px;
+    background: linear-gradient(135deg, #8b5a00, #c98c2e);
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    border-radius: 30px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-cv:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    background: linear-gradient(135deg, #c98c2e, #8b5a00);
+}
+
+/* ===== RESEAUX SOCIAUX ===== */
+/* ===== RESEAUX SOCIAUX ===== */
+.social-links {
+    margin: 20px 0;
+    display: flex;
+    gap: 15px;
+}
+
+.social-links a {
+    text-decoration: none;
+    color: #8b5a00;
+    font-weight: bold;
+    border: 1px solid #8b5a00;
+    padding: 6px 12px;
+    border-radius: 50%;
+    transition: 0.3s;
+}
+
+.social-links a:hover {
+    background-color: #8b5a00;
+    color: white;
+}
+/* ===== FORMATIONS ===== */
+#formations {
+    padding: 80px 60px;
+}
+
+#formations h2 {
+    margin-bottom: 40px;
+    color: #8b5a00;
+}
+   
+.formations-container {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: 40px;
+    flex-wrap: nowrap;
+}
+
+
+
+
+
+
+/* Carte formation */
+.formation-card {
+    width: 260px;           /* 👈 largeur suffisante */
+    height: 260px;
+    background: #8a620e;
+    border-radius: 20px;
+    padding: 20px;
+    cursor: pointer;
+    text-align: center;
+    transition: 0.3s;
+    position: relative;
+}
+
+
+/* Effet LED */
+.formation-card::before {
+    content: "";
+    position: absolute;
+    inset: -2px;
+    border-radius: 22px;
+    background: linear-gradient(135deg, #8b5a00, #ffd27f, #8b5a00);
+    z-index: -1;
+    filter: blur(8px);
+    opacity: 0.7;
+}
+
+.formation-card:hover {
+    transform: translateY(-10px);
+}
+
+.formation-card h3 {
+    margin-top: 40px;
+    font-size: 18px;
+    color: #333;
+}
+
+.formation-card p {
+    margin-top: 15px;
+    color: #8b5a00;
+    font-weight: bold;
+}
+
+/* Zone détails */
+.formation-details {
+    margin-top: 50px;
+    padding: 30px;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+section {
+    width: 100%;
+    padding: 2rem;
+    box-sizing: border-box;
+}
+
+.formations-container {
+    display: flex;
+    flex-direction: row;      /* 🔴 OBLIGATOIRE */
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    flex-wrap: nowrap;        /* 🔴 empêche le retour à la ligne */
+}
+
+
+/* ===== FORMATIONS ===== */
+#formations {
+    padding: 80px 60px;
+}
+
+#formations h2 {
+    text-align: center;
+    margin-bottom: 50px;
+    color: #8b5a00;
+}
+
+.formations-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+/* Carte formation verticale */
+.formation-card {
+    width: 220px;
+    height: 340px;
+    background:#edd5a2;
+    border-radius: 20px;
+    text-decoration: none;
+    color: #333;
+    text-align: center;
+    padding: 15px;
+    position: relative;
+    transition: 0.3s;
+}
+
+/* Effet LED */
+.formation-card::before {
+    content: "";
+    position: absolute;
+    inset: -3px;
+    border-radius: 22px;
+    background: linear-gradient(135deg, #8b5a00, #ffd27f, #8b5a00);
+    filter: blur(10px);
+    opacity: 0.8;
+    z-index: -1;
+}
+
+/* Image sur la carte */
+.formation-card img {
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 15px;
+    margin-bottom: 15px;
+}
+
+.formation-card h3 {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.formation-card p {
+    font-size: 13px;
+    color: #8b5a00;
+    font-weight: bold;
+}
+
+.formation-card:hover {
+    transform: translateY(-12px);
+}
+
+
+.formation-details {
+    margin-top: 1rem;
+    padding: 1rem;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    background: #f9f9f9;
+}
+@media (max-width: 900px) {
+    .formations-container {
+        flex-wrap: wrap;
+    }
+}
+/* ===== PAGE FORMATION (BUTRT) ===== */
+
+.formation-page {
+  max-width: 900px;
+  margin: 80px auto;
+  padding: 60px;
+  background: rgba(212, 197, 150, 0.85);
+  border-radius: 30px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+/* Effet lumineux léger autour */
+.formation-page::before {
+  content: "";
+  position: absolute;
+  inset: -4px;
+  border-radius: 32px;
+  background: linear-gradient(135deg, #8b5a00, #ffd27f, #8b5a00);
+  filter: blur(15px);
+  opacity: 0.5;
+  z-index: -1;
+}
+
+/* Titre */
+.formation-page h1 {
+  color: #8b5a00;
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 28px;
+}
+
+/* Image formation */
+.formation-img {
+  width: 40%;
+  max-width: 420px;
+  display: block;
+  margin: 0 auto 40px auto;
+  border-radius: 25px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* Texte */
+.formation-page p {
+  font-size: 15px;
+  line-height: 1.8;
+  color: #333;
+  margin-bottom: 20px;
+  text-align: justify;
+}
+
+/* Bouton retour */
+.formation-page .btn-cv {
+  display: block;
+  width: fit-content;
+  margin: 40px auto 0 auto;
+}
+.diplomes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px; /* espace entre les images */
+    margin-top: 20px;
+}
+.diplome-img {
+    max-width: 300px;
+    height: auto;
+}
+/* ===== EXPÉRIENCE PROFESSIONNELLE ===== */
+
+.experience-section {
+  padding: 80px 40px;
+}
+
+.experience-section h2 {
+  text-align: center;
+  margin-bottom: 50px;
+  color: #8b5a00;
+}
+
+.experience-container {
+  display: flex;
+  gap: 25px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.experience-card {
+  width: 260px;
+  height: 180px;
+  background: white;
+  border-radius: 20px;
+  padding: 25px;
+  text-decoration: none;
+  color: #333;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+}
+
+/* Effet lumineux */
+.experience-card::before {
+  content: "";
+  position: absolute;
+  inset: -3px;
+  border-radius: 22px;
+  background: linear-gradient(135deg, #8b5a00, #ffd27f, #8b5a00);
+  filter: blur(12px);
+  opacity: 0.6;
+  z-index: -1;
+}
+
+.experience-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+}
+
+.experience-card h3 {
+  font-size: 15px;
+  margin-bottom: 15px;
+  color: #8b5a00;
+}
+
+.experience-card p {
+  font-size: 13px;
+  line-height: 1.5;
+}
+/* Images dans les cartes d'expérience */
+.experience-card img {
+  width: 100%;
+  max-width: 200px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 15px;
+  display: block;
+  margin: 15px auto 0;
+}
+/* ===== FORCER LES CARTES EXPERIENCE ===== */
+.experience-card {
+  width: 270px !important;
+  background: var(--blanc) !important;
+  border-radius: 22px !important;
+  padding: 18px !important;
+  text-align: center !important;
+  box-shadow: 0 8px 22px var(--ombre) !important;
+  overflow: hidden !important;
+}
+
+.experience-card img {
+  width: 100% !important;
+  height: 160px !important;
+  object-fit: cover !important;
+  border-radius: 16px !important;
+  margin-bottom: 12px !important;
+}
+
+
+.gallery {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 30px 0;
+}
+
+.gallery img {
+  width: 200px;
+  height: 130px;
+  object-fit: cover;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+/* Animation d’apparition */
+.formation-page {
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Icônes titres */
+.formation-page h3::before {
+  content: "🔹 ";
+}
+
+/* Date */
+.exp-date {
+  font-style: italic;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+/* Galerie images */
+.gallery {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 30px 0;
+}
+
+.gallery img {
+  width: 200px;
+  height: 130px;
+  object-fit: cover;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+#competences h2 {
+  text-align: center;
+  color: #8b5a2b; /* marron */
+  font-size: 30px;
+  margin-bottom: 40px;
+}
+
+
+.competence-container {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.competence-card {
+  width: 220px;
+  background: #8a620e;
+  border-radius: 20px;
+  padding: 15px;
+  text-align: center;
+  color: white;
+  text-decoration: none;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.competence-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 0 20px #a98d50;
+}
+
+.competence-card img {
+  width: 100%;
+  height: 130px;
+  object-fit: cover;
+  border-radius: 15px;
+}
+
+.competence-card h3 {
+  margin: 10px 0 5px;
+}
+
+.projet-container {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.projet-card {
+  width: 230px;
+  background: #8a620e;
+  border-radius: 20px;
+  padding: 15px;
+  text-align: center;
+  text-decoration: none;
+  color: white;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.projet-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 0 20px #8b5a2b;
+}
+
+
+#projets h2 {
+  text-align: center;
+  color: #8b5a2b;
+  font-size: 36px;
+  margin-bottom: 30px;
+}
+
+.projet-section-title {
+  text-align: center;
+  color: #8b5a2b;
+  font-size: 28px;
+  margin: 50px 0 30px;
+}
+.projet-card img {
+  width: 100%;
+  height: 140px;          /* hauteur fixe */
+  object-fit: cover;     /* coupe proprement l’image */
+  border-radius: 15px;
+  margin-bottom: 10px;
+}
+
+
+/* ================================
+   VARIABLES GLOBALES
+================================ */
+:root {
+  --marron: #6b3e26;
+  --beige: #f6f1ec;
+  --ombre: rgba(0, 0, 0, 0.15);
+  --blanc: #ffffff;
+}
+
+/* ================================
+   BASE
+================================ */
+body {
+  margin: 0;
+  font-family: 'Poppins', Arial, sans-serif;
+  background: var(--beige);
+  color: #222;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* ================================
+   TITRES DE SECTIONS
+================================ */
+.section-title {
+  text-align: center;
+  color: var(--marron);
+  font-size: 2.5rem;
+  margin: 80px 0 50px;
+  font-weight: bold;
+}
+
+/* ================================
+   CONTAINER DES CARTES
+================================ */
+.experience-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 35px;
+  margin-bottom: 80px;
+}
+
+/* ================================
+   CARTES (TOUTES)
+================================ */
+.experience-card {
+  width: 270px;
+  background: var(--beige);
+  border-radius: 22px;
+  padding: 18px;
+  text-align: center;
+  box-shadow: 0 8px 22px var(--ombre);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.experience-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 16px 35px var(--ombre);
+}
+
+/* ================================
+   IMAGES DANS LES CARTES
+================================ */
+.card {
+  width: 270px;
+  background: var(--blanc);
+  border-radius: 22px;
+  padding: 18px;
+  text-align: center;
+  box-shadow: 0 8px 22px var(--ombre);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 16px 35px var(--ombre);
+}
+
+.card img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 16px;
+  margin-bottom: 12px;
+}
+
+.card h3 {
+  color: var(--marron);
+}
+
+/* ================================
+   TEXTE DANS LES CARTES
+================================ */
+.experience-card h3 {
+  color: var(--marron);
+  font-size: 1.15rem;
+  margin-bottom: 8px;
+}
+
+.experience-card p {
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+/* ================================
+   PAGES INTERNES (DÉTAILS)
+================================ */
+.formation-page {
+  max-width: 900px;
+  margin: auto;
+  padding: 90px 40px;
+}
+
+.formation-page h1 {
+  text-align: center;
+  color: var(--marron);
+  font-size: 2.4rem;
+  margin-bottom: 20px;
+}
+
+.formation-page h2,
+.formation-page h3 {
+  color: var(--marron);
+  margin-top: 40px;
+}
+
+.formation-page p {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  margin-top: 15px;
+}
+
+/* ================================
+   IMAGE PAGE INTERNE
+================================ */
+.formation-img {
+  width: 70%;
+  display: block;
+  margin: 40px auto;
+  border-radius: 22px;
+  box-shadow: 0 10px 25px var(--ombre);
+}
+
+/* ================================
+   LISTES
+================================ */
+ul {
+  margin-top: 15px;
+  line-height: 1.8;
+}
+
+/* ================================
+   BOUTON RETOUR
+================================ */
+.btn-cv {
+  display: inline-block;
+  margin-top: 50px;
+  padding: 14px 30px;
+  background: var(--marron);
+  color: var(--blanc);
+  border-radius: 35px;
+  font-weight: bold;
+  transition: opacity 0.3s ease;
+}
+
+.btn-cv:hover {
+  opacity: 0.85;
+}
+
+/* ================================
+   RESPONSIVE
+================================ */
+@media (max-width: 768px) {
+  .experience-card {
+    width: 90%;
+  }
+
+  .formation-img {
+    width: 100%;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+}
+.footer {
+  background: #111;
+  padding: 25px 0;
+  text-align: center;
+  margin-top: 80px;
+}
+
+.footer a {
+  color: #eee;
+  text-decoration: none;
+  margin: 0 10px;
+  font-size: 0.95rem;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+
+/* ================================
+   IMAGES DANS LES PAGES DÉTAILLÉES
+================================ */
+.page-image {
+  width: 100%;
+  max-width: 800px;
+  margin: 30px auto;
+}
+
+.page-image img {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  border-radius: 22px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+
+
+/* ================================
+   MENU – BOUTONS CIRCULAIRES
+================================ */
+nav ul li a {
+  position: relative;
+  padding: 12px 18px;
+  border-radius: 50px;
+  color: var(--marron);
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+/* Cercle lumineux */
+nav ul li a::before {
+  content: "";
+  position: absolute;
+  inset: -6px;
+  border-radius: 50px;
+  background: rgba(150, 90, 40, 0.25);
+  filter: blur(10px);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: -1;
+}
+
+nav ul li a:hover::before,
+nav ul li a.active::before {
+  opacity: 1;
+}
+
+nav ul li a:hover {
+  color: #e49f38;
+  background: var(--marron);
+}
+
+.logo img {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.btn-university {
+  display: inline-block;
+  padding: 10px 18px;
+  background-color: #6f4e37; /* marron élégant */
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 500;
+  border-radius: 6px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-university:hover {
+  background-color: #5a3f2c; /* marron plus foncé */
+  transform: translateY(-2px);
+}
+
+.btn-university:active {
+  transform: translateY(0);
+}
+
+.footer {
+    background: #111;
+    padding: 30px 0;
+    text-align: center;
+}
+
+/* Copyright */
+.footer .copyright {
+    color: #888;
+    font-size: 13px;
+    margin-top: 10px;
+}
+
+/* Bloc RGPD */
+.rgpd-box {
+    margin-top: 15px;
+    background: rgba(255, 255, 255, 0.08);
+    padding: 12px 20px;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10px;
+}
+
+.rgpd-box p {
+    color: #e1ae49;
+    font-size: 12px;
+    line-height: 1.6;
+}
+.page-image img {
+  max-width: 300px;
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 30px auto;
+  border-radius: 20px;
+}
+.page-int img {
+  max-width: 100px;
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 30px auto;
+  border-radius: 20px;}
+
+  /* ================================
+   DATE / SOUS-TITRE
+================================ */
+.date {
+  text-align: center;
+  color: #777;
+  font-style: italic;
+  margin-bottom: 30px;
+}
+
+/* ================================
+   DATE / SOUS-TITRE
+================================ */
+.date {
+  text-align: center;
+  color: #d9b31d;
+  font-style: italic;
+  margin-bottom: 30px;
+}
+
+/* ================================
+   PAGE SAE / PROJET DÉTAILLÉ
+================================ */
+
+.formation-page {
+  max-width: 900px;
+  margin: 140px auto 80px;
+  padding: 60px 50px;
+  background: var(--blanc);
+  border-radius: 28px;
+  box-shadow: 0 18px 40px var(--ombre);
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+/* Effet lumineux discret */
+.formation-page::before {
+  content: "";
+  position: absolute;
+  inset: -4px;
+  border-radius: 32px;
+  background: linear-gradient(
+    135deg,
+    var(--marron),
+    #db920b,
+    var(--marron)
+  );
+  filter: blur(14px);
+  opacity: 0.4;
+  z-index: -1;
+}
+
+/* Titres */
+.formation-page h1 {
+  text-align: center;
+  color: var(--marron);
+  font-size: 2.3rem;
+  margin-bottom: 10px;
+}
+
+.formation-page h2,
+.formation-page h3 {
+  color: var(--marron);
+  margin-top: 35px;
+}
+
+/* Date / sous-titre */
+.formation-page .date {
+  text-align: center;
+  color: #777;
+  font-style: italic;
+  margin-bottom: 35px;
+}
+
+/* Texte */
+.formation-page p {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  margin-top: 15px;
+  text-align: justify;
+}
+
+/* Image principale */
+.formation-img {
+  width: 70%;
+  max-width: 420px;
+  display: block;
+  margin: 40px auto;
+  border-radius: 22px;
+  box-shadow: 0 12px 28px var(--ombre);
+}
+
+/* Galerie */
+.gallery {
+  display: flex;
+  gap: 18px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 35px 0;
+}
+
+.gallery img {
+  width: 200px;
+  height: 130px;
+  object-fit: cover;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px var(--ombre);
+}
+
+/* Bouton retour */
+.formation-page .btn-cv {
+  display: block;
+  width: fit-content;
+  margin: 50px auto 0;
+}
+
